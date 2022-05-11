@@ -63,14 +63,19 @@ class Admin
     }
     public function admin()
     {
-        $views = ['admin/admin'];
-        $args  = [
-            'title' => 'Administradores',
-            'site_name' => $this->site_name
-        ];
-        $header = 'templates/admin/header';
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        if(isset($_POST['name'])){
+            $admin = new AdminController();
+            echo $admin->new_admin();
+        }else{
+            $views = ['admin/admin'];
+            $args  = [
+                'title' => 'Administradores',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
     }
     public function teacher()
     {

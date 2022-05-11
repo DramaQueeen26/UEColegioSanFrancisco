@@ -17,37 +17,42 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="<?=$baseUrl?>admin/admin/" method="post">
+									    	<div class="form-group label-floating">
+											  <label class="control-label">Cédula</label>
+											  <input class="form-control" type="number" name="ci">
+											</div>
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Apellido</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="last_name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Dirección</label>
-											  <textarea class="form-control"></textarea>
+											  <textarea class="form-control" name="address"></textarea>
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Correo</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="email" name="email">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Telefono</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="number" name="phone">
 											</div>
 											<div class="form-group">
 										      <label class="control-label">Foto</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Buscar...">
-										        <input type="file" >
+										        <input type="file" name="photo">
 										      </div>
 										    </div>
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
+										    <div class="response"></div>
 									    </form>
 									</div>
 								</div>

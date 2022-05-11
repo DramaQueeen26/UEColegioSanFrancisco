@@ -7,6 +7,7 @@ use App\Controllers\SubjectController;
 use App\Controllers\SectionController;
 use App\Controllers\AdminController;
 use App\Controllers\TeacherController;
+use App\Controllers\RepresentativeController;
 use App\Controllers\StudentController;
 
 
@@ -86,6 +87,22 @@ class Admin
             $views = ['admin/teacher'];
             $args  = [
                 'title' => 'Docentes',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
+    }
+    public function representative()
+    {
+        if(isset($_POST['name'])){
+            $representative = new RepresentativeController();
+            echo $representative->new_representative();
+        }else{
+            $views = ['admin/representative'];
+            $args  = [
+                'title' => 'Representantes',
                 'site_name' => $this->site_name
             ];
             $header = 'templates/admin/header';

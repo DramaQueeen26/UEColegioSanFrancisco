@@ -80,6 +80,9 @@
 							<a href="<?=$baseUrl?>admin/teacher/"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Docentes</a>
 						</li>
 						<li>
+							<a href="<?=$baseUrl?>admin/representative/"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i> Representantes</a>
+						</li>
+						<li>
 							<a href="<?=$baseUrl?>admin/student/"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Estudiantes</a>
 						</li>
 					</ul>

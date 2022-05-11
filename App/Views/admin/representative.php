@@ -1,94 +1,65 @@
 <!-- Content page -->
 		<div class="container-fluid">
 			<div class="page-header">
-			  <h1 class="text-titles"><i class="zmdi zmdi-face zmdi-hc-fw"></i> Usuarios <small>Estudiantes</small></h1>
+			  <h1 class="text-titles"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i> Usuarios <small>Representantes</small></h1>
 			</div>
-			<p class="lead">En este apartado puede agregar nuevos estudiantes al sistema</p>
+			<p class="lead">En esta seccion puedes añadir nuevos representantes a la base de datos</p>
 		</div>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-					  	<li class="active"><a href="#new" data-toggle="tab">Nuevo estudiante</a></li>
-					  	<li><a href="#list" data-toggle="tab">Lista de estudiantes</a></li>
+					  	<li class="active"><a href="#new" data-toggle="tab">Nuevo representante</a></li>
+					  	<li><a href="#list" data-toggle="tab">Lista</a></li>
 					</ul>
 					<div id="myTabContent" class="tab-content">
 						<div class="tab-pane fade active in" id="new">
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
-									    	<fieldset>Datos del estudiante</fieldset>
+									    <form action="<?=$baseUrl?>admin/representative/" method="post">
+									    	<div class="form-group label-floating">
+											  <label class="control-label">Cédula</label>
+											  <input class="form-control" type="number" name="ci">
+											</div>
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Apellido</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="last_name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Dirección</label>
-											  <textarea class="form-control"></textarea>
+											  <textarea name="address" class="form-control"></textarea>
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Correo</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="email" name="email">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Telefono</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="number" name="phone">
 											</div>
 											<div class="form-group">
-										        <label class="control-label">Genero</label>
-										        <select class="form-control">
+										        <label class="control-label">Género</label>
+										        <select class="form-control" name="gender">
 										          <option>Hombre</option>
 										          <option>Mujer</option>
 										        </select>
 										    </div>
-										    <div class="form-group label-floating">
-											  <label class="control-label">Parentesco</label>
-											  <input class="form-control" type="text" name="relationship">
-											</div>
 											<div class="form-group">
 										      <label class="control-label">Foto</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Buscar...">
-										        <input type="file" >
+										        <input type="file" name="photo">
 										      </div>
 										    </div>
-										    <div class="form-group">
-										        <label class="control-label">Section</label>
-										        <select class="form-control">
-										          <option>1 grado</option>
-										          <option>2 grado</option>
-										          <option>3 grado</option>
-										          <option>4 grado</option>
-										          <option>5 grado</option>
-												  <option>6 grado</option>
-										        </select>
-										    </div>
-										    <br><br>
-										    <fieldset>Representante</fieldset>
-											<div class="form-group label-floating">
-												<label class="control-label">Nombre</label>
-												<input class="form-control" type="text">
-											  </div>
-										    <div class="form-group label-floating">
-											  <label class="control-label">Cedula del representante</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-												<label class="control-label">Telefono</label>
-												<input class="form-control" type="text">
-											  </div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Parentesco</label>
-											  <input class="form-control" type="text">
-											</div>	
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
+										    <div class="response"></div>
 									    </form>
 									</div>
 								</div>
@@ -106,7 +77,6 @@
 											<th class="text-center">Correo</th>
 											<th class="text-center">Telefono</th>
 											<th class="text-center">Genero</th>
-											<th class="text-center">Sección</th>
 											<th class="text-center">Actualizar</th>
 											<th class="text-center">Borrar</th>
 										</tr>
@@ -114,49 +84,45 @@
 									<tbody>
 										<tr>
 											<td>1</td>
-											<td>Pedro</td>
-											<td>Perez</td>
-											<td>Cabudare</td>
-											<td>estudiante@gmail.com</td>
+											<td>Carlos</td>
+											<td>Alfaro</td>
+											<td>Barquisimeto</td>
+											<td>carlos@gmail.com</td>
 											<td>04245974905</td>
 											<td>Hombre</td>
-											<td>A</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>2</td>
-											<td>Pedro</td>
+											<td>Luis</td>
 											<td>Perez</td>
-											<td>Cabudare</td>
-											<td>estudiante@gmail.com</td>
+											<td>Barquisimeto</td>
+											<td>carlos@gmail.com</td>
 											<td>04245974905</td>
 											<td>Hombre</td>
-											<td>B</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>3</td>
-											<td>Luisa</td>
-											<td>Barreto</td>
-											<td>Cabudare</td>
-											<td>estudiante@gmail.com</td>
+											<td>Maria</td>
+											<td>Yepez</td>
+											<td>Barquisimeto</td>
+											<td>carlos@gmail.com</td>
 											<td>04245974905</td>
 											<td>Mujer</td>
-											<td>B</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
 										<tr>
 											<td>4</td>
-											<td>Luis</td>
-											<td>Perez</td>
-											<td>Cabudare</td>
-											<td>estudiante@gmail.com</td>
+											<td>Jose</td>
+											<td>Mendoza</td>
+											<td>Barquisimeto</td>
+											<td>carlos@gmail.com</td>
 											<td>04245974905</td>
 											<td>Hombre</td>
-											<td>A</td>
 											<td><a href="#!" class="btn btn-success btn-raised btn-xs"><i class="zmdi zmdi-refresh"></i></a></td>
 											<td><a href="#!" class="btn btn-danger btn-raised btn-xs"><i class="zmdi zmdi-delete"></i></a></td>
 										</tr>
@@ -179,7 +145,9 @@
 		</div>
 	</section>
 
-	<!-- Notifications area 
+	
+	<!-- Notificaciones por si decidimos poner
+
 	<section class="full-box Notifications-area">
 		<div class="full-box Notifications-bg btn-Notifications-area"></div>
 		<div class="full-box Notifications-body">
@@ -231,8 +199,6 @@
 				    </div>
 			  	</div>
 			</div>
-
-			
 
 		</div>
 	</section>

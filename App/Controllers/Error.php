@@ -15,9 +15,7 @@ class Error
     {
         http_response_code(404);
         $views = ['error/404'];
-        $args  = ['title' => 'Error 404 | Page Not Found'];
-        $header = "templates/admin/header";
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        $args  = ['title' => 'Error 404 - Página no encontrada'];
+        View::render($views, $args, $header = null, $footer = null);
     }
 }

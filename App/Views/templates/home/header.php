@@ -105,9 +105,9 @@ $(function() {
     </div>
     <div id="topnav">
       <ul>
-        <li class="active"><a href="<?=$baseUrl?>">Inicio</a></li>
-        <li><a href="<?=$baseUrl?>home/college/">Colegio</a></li>
-        <li><a href="<?=$baseUrl?>home/gallery/">Galería</a></li>
+        <li id="Inicio"><a href="<?=$baseUrl?>">Inicio</a></li>
+        <li id="Colegio"><a href="<?=$baseUrl?>home/college/">Colegio</a></li>
+        <li id="Galería"><a href="<?=$baseUrl?>home/gallery/">Galería</a></li>
         <li><a href="#">Publicaciones</a></li>  
         <li class="last"><a href="#">Contacto</a></li>
       </ul>

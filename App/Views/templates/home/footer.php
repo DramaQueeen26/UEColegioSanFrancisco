@@ -46,6 +46,15 @@
     <br class="clear" />
   </div>
 </div>
+
+<!-- Para agregarle la clase active a los vínculos -->
+
+<script>
+  
+  $('#topnav li').removeClass('active');
+  $('#<?=$title?>').addClass('active');
+
+</script>
 </body>
 </html>
 

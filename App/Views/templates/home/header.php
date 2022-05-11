@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Colegio San Francisco</title>
+<title><?= $title . ' - ' . $site_name?></title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <link rel="stylesheet" href="<?=$baseUrl?>css/styles/layout.css" type="text/css" />
 
@@ -85,7 +85,7 @@ $(function() {
     <div id="loginpanel">
       <ul>
         <li  class="left">Conéctate &raquo;</li>
-        <li class="right" id="toggle"><a id="slideit" href="<?=$baseUrl?>SistemaAdministracion/index.html">Login</a><a id="closeit" style="display: none;" href="<?=$baseUrl?>SistemaAdministracion/index.html">Cerrar panel</a></li>
+        <li class="right" id="toggle"><a id="slideit" href="<?=$baseUrl?>home/login">Login</a><a id="closeit" style="display: none;" href="<?=$baseUrl?>home/login">Cerrar panel</a></li>
       </ul>
     </div>
     <br class="clear" />

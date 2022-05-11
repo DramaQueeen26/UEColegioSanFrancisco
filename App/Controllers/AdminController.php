@@ -18,6 +18,7 @@ class AdminController extends AdminModel
 		$address = $util->clean_string($_POST['address']);
 		$email = $util->clean_string($_POST['email']);
 		$phone = $util->clean_string($_POST['phone']);
+		$gender = $util->clean_string($_POST['gender']);
 		$photo = $_FILES['photo']['name'];
 
 		if(empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone)){

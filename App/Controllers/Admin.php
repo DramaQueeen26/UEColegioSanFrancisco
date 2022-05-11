@@ -79,24 +79,34 @@ class Admin
     }
     public function teacher()
     {
-        $views = ['admin/teacher'];
-        $args  = [
-            'title' => 'Docentes',
-            'site_name' => $this->site_name
-        ];
-        $header = 'templates/admin/header';
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        if(isset($_POST['name'])){
+            $teacher = new TeacherController();
+            echo $teacher->new_teacher();
+        }else{
+            $views = ['admin/teacher'];
+            $args  = [
+                'title' => 'Docentes',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
     }
     public function student()
     {
-        $views = ['admin/student'];
-        $args  = [
-            'title' => 'Estudiantes',
-            'site_name' => $this->site_name
-        ];
-        $header = 'templates/admin/header';
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        if(isset($_POST['name'])){
+            $student = new StudentController();
+            echo $student->new_student();
+        }else{
+            $views = ['admin/student'];
+            $args  = [
+                'title' => 'Estudiantes',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
     }
 }

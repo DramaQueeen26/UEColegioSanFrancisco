@@ -10,23 +10,28 @@ class Home
     {
         $views = ['home/index'];
         $args  = ['title' => 'Home'];
-        View::render($views, $args);
+        $header = 'templates/home/header';
+        $footer = 'templates/home/footer';
+        View::render($views, $args, $header, $footer);
     }
 
-    public function example()
+    public function college()
     {
-        $views = ['home/example'];
-        $args  = ['title' => 'Home | Example'];
-        View::render($views, $args);
+        $views = ['home/college'];
+        $args  = ['title' => 'Colegio'];
+        $header = 'templates/home/header';
+        $footer = 'templates/home/footer';
+        View::render($views, $args, $header, $footer);
     }
+    
+    public function gallery()
+    {
+        $views = ['home/gallery'];
+        $args  = ['title' => 'Galería'];
+        $header = 'templates/home/header';
+        $footer = 'templates/home/footer';
+        View::render($views, $args, $header, $footer);
+    }
+    
 
-    public function exampleWithArgs($id = null)
-    {
-        $views = ['home/example_with_args'];
-        $args  = [
-            'title' => 'Home | Example',
-            'id' => $id ?? 'No se envio ID'
-        ];
-        View::render($views, $args);
-    }
 }

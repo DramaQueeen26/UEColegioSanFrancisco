@@ -19,35 +19,35 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
-									    	<div class="form-group label-floating">
+									    <form action="<?=$baseUrl?>admin/section/" method="post">
+									    	<!-- <div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
-											  <input class="form-control" type="text">
-											</div>
+											  <input class="form-control" type="text" name="name">
+											</div> -->
 											<div class="form-group label-floating">
 											  <label class="control-label">Sección</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="section">
 											</div>
 											<div class="form-group">
 										      
 										        <h5><b>Grados</b></h5>
 													<label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea1" value="opcion_1"> 1er
+														<input type="checkbox" id="checkboxEnLinea1" value="opcion_1" name="checkbox[]"> 1er
 													  </label>
 													  <label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea2" value="opcion_2"> 2do
+														<input type="checkbox" id="checkboxEnLinea2" value="opcion_2" name="checkbox[]"> 2do
 													  </label>
 													  <label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> 3er
+														<input type="checkbox" id="checkboxEnLinea3" value="opcion_3" name="checkbox[]"> 3er
 													  </label>
 													  <label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> 4to
+														<input type="checkbox" id="checkboxEnLinea3" value="opcion_4" name="checkbox[]"> 4to
 													  </label>
 													  <label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> 5to
+														<input type="checkbox" id="checkboxEnLinea3" value="opcion_5" name="checkbox[]"> 5to
 													  </label>
 													  <label class="checkbox-inline">
-														<input type="checkbox" id="checkboxEnLinea3" value="opcion_3"> 6to
+														<input type="checkbox" id="checkboxEnLinea3" value="opcion_6" name="checkbox[]"> 6to
 													  </label>
 										        
 										    </div>
@@ -55,6 +55,7 @@
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
+										    <div class="response"></div>
 									    </form>
 									</div>
 								</div>

@@ -4,6 +4,11 @@ namespace App\Controllers;
 
 use Core\View;
 use App\Controllers\SubjectController;
+use App\Controllers\SectionController;
+use App\Controllers\AdminController;
+use App\Controllers\TeacherController;
+use App\Controllers\StudentController;
+
 
 class Admin
 {
@@ -41,14 +46,20 @@ class Admin
     }
     public function section()
     {
-        $views = ['admin/section'];
-        $args  = [
-            'title' => 'Secciones',
-            'site_name' => $this->site_name
-        ];
-        $header = 'templates/admin/header';
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        if(isset($_POST['section'])){
+
+            $section = new SectionController();
+            echo $section->new_section();
+        }else{
+            $views = ['admin/section'];
+            $args  = [
+                'title' => 'Secciones',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
     }
     public function admin()
     {

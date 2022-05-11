@@ -1,4 +1,4 @@
-<!-- Cotenido principal -->
+		<!-- Cotenido principal -->
 		<div class="container-fluid">
 			<div class="page-header">
 			  <h1 class="text-titles">Administración<small>  Usuarios registrados:</small></h1>

@@ -1,7 +1,7 @@
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-      <h1 class="mt-5">Page Not Found - 404</h1>
+
+<!-- Cotenido principal -->
+    <div class="container-fluid">
+      <div class="page-header">
+        <h1 class="text-titles">Página no encontrada<small>  Error 404</small></h1>
+      </div>
     </div>
-  </div>
-</div>

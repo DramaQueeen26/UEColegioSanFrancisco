@@ -20,10 +20,10 @@
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
 									    <form action="<?=$baseUrl?>admin/section/" method="post">
-									    	<!-- <div class="form-group label-floating">
+									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
 											  <input class="form-control" type="text" name="name">
-											</div> -->
+											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Sección</label>
 											  <input class="form-control" type="text" name="section">

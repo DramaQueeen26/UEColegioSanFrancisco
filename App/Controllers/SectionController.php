@@ -12,9 +12,11 @@ class SectionController extends SectionModel
 	{
 		$util = new Util();
 
+    	$name = $util->clean_string($_POST['name']);
     	$section = $util->clean_string($_POST['section']);
 
-		if(empty($section) || empty($_POST['checkbox'])){
+
+		if(empty($name) || empty($section) || empty($_POST['checkbox'])){
 			$alert = [
 		    	"alert"=>"simple",
 		        "type"=>"error",
@@ -34,12 +36,12 @@ class SectionController extends SectionModel
 			    ];
 			}else{
 
-				if(!preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $section)){
+				if(!preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $section ) || !preg_match("/^[a-zA-ZÀ-ÿ\s]{1,40}$/", $name )){
 					$alert = [
 		                "alert"=>"simple",
 		                "type"=>"error",
 		                "title"=>"Oh no!",
-		                "text"=>"Sólo se permiten letras para la sección"
+		                "text"=>"Sólo se permiten letras para la sección y el nombre"
 		    		];
 		    	}else{
 		    		/*AQUI IRIA LA INSERCIÓN A LA BASE DE DATOS*/

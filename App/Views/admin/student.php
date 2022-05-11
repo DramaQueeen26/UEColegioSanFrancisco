@@ -17,49 +17,37 @@
 							<div class="container-fluid">
 								<div class="row">
 									<div class="col-xs-12 col-md-10 col-md-offset-1">
-									    <form action="">
+									    <form action="<?=$baseUrl?>admin/student/" method="post">
 									    	<fieldset>Datos del estudiante</fieldset>
 									    	<div class="form-group label-floating">
 											  <label class="control-label">Nombre</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Apellido</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="last_name">
 											</div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Dirección</label>
-											  <textarea class="form-control"></textarea>
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Correo</label>
-											  <input class="form-control" type="text">
-											</div>
-											<div class="form-group label-floating">
-											  <label class="control-label">Telefono</label>
-											  <input class="form-control" type="text">
+											  <textarea name="address" class="form-control"></textarea>
 											</div>
 											<div class="form-group">
 										        <label class="control-label">Genero</label>
-										        <select class="form-control">
+										        <select name="gender" class="form-control">
 										          <option>Hombre</option>
 										          <option>Mujer</option>
 										        </select>
 										    </div>
-										    <div class="form-group label-floating">
-											  <label class="control-label">Parentesco</label>
-											  <input class="form-control" type="text" name="relationship">
-											</div>
 											<div class="form-group">
 										      <label class="control-label">Foto</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Buscar...">
-										        <input type="file" >
+										        <input type="file" name="photo">
 										      </div>
 										    </div>
 										    <div class="form-group">
-										        <label class="control-label">Section</label>
-										        <select class="form-control">
+										        <label class="control-label">Grado</label>
+										        <select name="grade" class="form-control">
 										          <option>1 grado</option>
 										          <option>2 grado</option>
 										          <option>3 grado</option>
@@ -72,23 +60,28 @@
 										    <fieldset>Representante</fieldset>
 											<div class="form-group label-floating">
 												<label class="control-label">Nombre</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="text" name="r_name">
 											  </div>
 										    <div class="form-group label-floating">
 											  <label class="control-label">Cedula del representante</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="number" name="r_ci">
+											</div>
+											<div class="form-group label-floating">
+											  <label class="control-label">Correo</label>
+											  <input class="form-control" type="email" name="r_email">
 											</div>
 											<div class="form-group label-floating">
 												<label class="control-label">Telefono</label>
-												<input class="form-control" type="text">
+												<input class="form-control" type="number" name="r_phone">
 											  </div>
 											<div class="form-group label-floating">
 											  <label class="control-label">Parentesco</label>
-											  <input class="form-control" type="text">
+											  <input class="form-control" type="text" name="r_relationship">
 											</div>	
 										    <p class="text-center">
 										    	<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i> Guardar</button>
 										    </p>
+										    <div class="response"></div>
 									    </form>
 									</div>
 								</div>
@@ -231,8 +224,6 @@
 				    </div>
 			  	</div>
 			</div>
-
-			
 
 		</div>
 	</section>

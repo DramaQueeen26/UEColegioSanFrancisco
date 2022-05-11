@@ -43,13 +43,6 @@
 											  <input class="form-control" type="number" name="phone">
 											</div>
 											<div class="form-group">
-										        <label class="control-label">Género</label>
-										        <select class="form-control" name="gender">
-										          <option>Hombre</option>
-										          <option>Mujer</option>
-										        </select>
-										    </div>
-											<div class="form-group">
 										      <label class="control-label">Foto</label>
 										      <div>
 										        <input type="text" readonly="" class="form-control" placeholder="Buscar...">

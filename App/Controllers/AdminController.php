@@ -21,7 +21,7 @@ class AdminController extends AdminModel
 		$gender = $util->clean_string($_POST['gender']);
 		$photo = $_FILES['photo']['name'];
 
-		if(empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone)){
+		if(empty($ci) || empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone)){
 
 			$alert = [
 		    	"alert"=>"simple",

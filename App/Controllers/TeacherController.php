@@ -23,7 +23,7 @@ class TeacherController extends TeacherModel
 		$gender = $util->clean_string($_POST['gender']);
 		$photo = $_FILES['photo']['name'];
 
-		if(empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone) || empty($specialty)){
+		if(empty($ci) || empty($name) || empty($last_name) || empty($address) || empty($email) || empty($phone) || empty($specialty)){
 
 			$alert = [
 		    	"alert"=>"simple",

@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use Core\View;
+use App\Controllers\SubjectController;
 
 class Admin
 {
@@ -21,14 +22,22 @@ class Admin
     }
     public function subject()
     {
-        $views = ['admin/subject'];
-        $args  = [
-            'title' => 'Materias',
-            'site_name' => $this->site_name
-        ];
-        $header = 'templates/admin/header';
-        $footer = 'templates/admin/footer';
-        View::render($views, $args, $header, $footer);
+        if(isset($_POST['name']) && isset($_POST['code'])){
+
+            $subject = new SubjectController();
+            echo $subject->new_subject();
+
+        }else{
+
+            $views = ['admin/subject'];
+            $args  = [
+                'title' => 'Materias',
+                'site_name' => $this->site_name
+            ];
+            $header = 'templates/admin/header';
+            $footer = 'templates/admin/footer';
+            View::render($views, $args, $header, $footer);
+        }
     }
     public function section()
     {

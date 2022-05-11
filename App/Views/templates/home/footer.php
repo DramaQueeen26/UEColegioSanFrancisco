@@ -55,6 +55,8 @@
   $('#<?=$title?>').addClass('active');
 
 </script>
+<script src="<?=$baseUrl?>js/ajax.js"></script>
+
 </body>
 </html>
 

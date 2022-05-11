@@ -26,6 +26,7 @@
 	<script src="<?=$baseUrl?>js/ripples.min.js"></script>
 	<script src="<?=$baseUrl?>js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="<?=$baseUrl?>js/main.js"></script>
+	<script src="<?=$baseUrl?>js/ajax.js"></script>
 	<script>
 		$.material.init();
 	</script>
